@@ -7,7 +7,6 @@ from .serializers import NewsSerializer, BlogSerializer
 
 
 class NewsView(APIView):
-
     def get(self, request):
         news = News.objects.all()
         serializer = NewsSerializer(news, many=True)
